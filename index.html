@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowriprakash</title>
+    <title>Gowriprakasj</title>
     <style>
         body {
-            font-family: "Times New Roman", Times, serif;
-            line-height: 1.5;
-            max-width: 900px;
+            font-family: "Times New Roman", serif;
+            max-width: 850px;
             margin: 40px auto;
             padding: 0 20px;
-            color: #000;
-            background-color: #fff;
+            line-height: 1.5;
+            color: #000; /* Text Color */
+            background-color: #e0ffff; /* Background Color */
         }
+        /* Use Flexbox for the header to keep image and text side-by-side */
         header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 20px;
+            margin-bottom: 30px; /* Adds space between header and the intro text */
+        }
+        .header-text {
+            flex: 1; /* Takes up remaining space */
         }
         .header-text h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
         .header-text p {
             margin: 5px 0;
         }
         .profile-pic {
-            width: 200px;
+            width: 180px;
             height: auto;
-            border: 1px solid #ccc;
-            margin-left: 20px;
+            border: 1px solid #000;
+            margin-left: 30px; /* Adds space between text and image */
         }
         hr {
             border: 0;
@@ -39,16 +43,19 @@
             margin: 20px 0;
         }
         h2 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-decoration: underline;
             margin-bottom: 10px;
         }
+        /* Remove bullet points and default padding */
         ul {
-            list-style-type: square;
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 5px;
         }
+        /* Minimal spacing between list items */
         li {
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
         a {
             color: #0000EE;
@@ -56,9 +63,6 @@
         }
         a:hover {
             text-decoration: underline;
-        }
-        .contact-info {
-            font-style: italic;
         }
     </style>
 </head>
@@ -69,9 +73,9 @@
             <h1>Gowri Prakash M</h1>
             <p>Physics undergrad</p>
             <p>Indian Institute of Science Education and Research, Tirupati</p>
-            <p class="contact-info">Email: <a href="mailto:gowriprakash.acad@gmail.com">your-email@students.iisertirupati.ac.in</a></p>
+            <p>Email: <a href="mailto:gowriprakash.acad@gmail.com">your-gowriprakash.acad@gmail.com</a></p>
         </div>
-        <img src="photo.jpg" alt="Gowri Prakash M" class="profile-pic">
+        <img src="profile.jpg" alt="Gowri Prakash M" class="profile-pic">
     </header>
 
     <p>
@@ -80,29 +84,27 @@
 
     <hr>
 
-    <section id="notes">
+    <section>
         <h2>Expositionary works</h2>
         <ul>
-            <li>[PDF] <a href="notes/grp_actions.pdf">Group action</a></li>
+            <li>[PDF] <a href="notes/group_action.pdf">Group action</a></li>
         </ul>
     </section>
 
-    <hr>
-
-    <section id="projects">
+    <section>
         <h2>Research & Projects</h2>
         <ul>
-            <li><strong>entry_1</li>
-            <li><strong>entry_2</li>
+            <li>entry_1</li>
+            <li>entry_2</li>
         </ul>
     </section>
 
     <hr>
 
-    <section id="links">
+    <section>
         <h2>External Links</h2>
         <ul>
-            <li><a href="https://scholar.google.com/citations?user=HTHFsscAAAAJ&hl=en">Google scholar</a></li>
+            <li><a href="https://scholar.google.com/">Google scholar</a></li>
         </ul>
     </section>
 
