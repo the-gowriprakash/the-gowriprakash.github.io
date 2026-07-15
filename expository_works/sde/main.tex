@@ -1,0 +1,86 @@
+% !TEX program = xelatex
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{fontspec}
+\theoremstyle{plain}
+\usepackage{amsthm}
+% Style for core mathematical results
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{propn}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+% Style for formal definitions and contextual items
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{eg}{Example}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{prblm}{Problem}[section]
+% Style for informal or supplementary notes
+\theoremstyle{boldremark}
+\newtheorem*{rk}{Remark}
+\newtheorem*{note}{Note}
+
+\usepackage{eso-pic, xcolor, graphicx}
+
+
+\newfontfamily{\tamilfont}{Nirmala UI}
+\usetikzlibrary{arrows.meta, decorations.pathmorphing, calc, positioning}
+% 1. Link the 'nickname' \customzha to your specific file
+\newfontfamily{\customzha}[Path = ./]{HindMadurai-Light.ttf}
+% 2. Use the nickname to change the font for just that character
+\renewcommand{\qedsymbol}{\textcolor{red}{{\customzha ழ}}}
+\DeclareMathOperator{\im}{im}
+\definecolor{cyan}{HTML}{00FFFF}
+
+
+
+\geometry{a4paper, margin=1in}
+
+\title{\textbf{Stochastic Differential Equations}\thanks{This is a preliminary draft and currently a work in progress.}}
+\author{Gowriprakash}
+
+\begin{document}
+
+\maketitle
+
+15/05/26\\
+the subject seem to be using a lot of constructs from measure theory and probability theory, the intersection being the probability measure.
+
+16/05/26\\
+i'm reading the papers by song and karras.
+
+17/05/26\\
+
+20/05/26\\
+i was getting a bit mathsy with rvs and dr. p clearly said to be keep it physicy and the next week's abjective is to understand the fokker planck equation. i have started with the book by prof. v. balakrishnan on elements of non equilibrium statistical mechanics. 
+
+26/05/26\\
+i think i've reached a point where i can start writing the exposition.
+
+\section*{Langevin equation}
+
+The objective of this equation is to model the motion of a particle ("tagged particle" as we call it) in a fluid, which is an elementary problem in the branch of non equilibrium statistical mechanics. \\
+\\
+The equation can be systematically obtained from the newton's 2nd law as follows. Consider a tagged particle of mass $m$ in a fluid which is being acted upon by an external force $\mathbf{F}$. Now newton's 2nd law reads,
+\begin{equation}
+    m \dot{\mathbf{v}} = \mathbf{F} 
+\end{equation}
+Now we split our system into 2 parts, the tagged particle and the rest of the system (i.e., the fluid). 
+
+
+
+%references:
+%1. Song, J., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., & Poole, B. (2021). Score-based generative modeling through stochastic differential equations. arXiv preprint arXiv:2011.13456.
+%2. Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., & Aila, T. (2022). Elucidating the design space of diffusion-based generative models. arXiv preprint arXiv:2206.00364.
+%3. stochastic differential equations: an introduction with applications by bernt oksendal
+%4. an intro to real and complex manifolds, giuliano sorani
+\end{document}
