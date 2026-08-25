@@ -1,0 +1,90 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{mathtools}
+\geometry{margin=1in}
+\usepackage[colorlinks=true, linkcolor=red, citecolor=red, urlcolor=blue]{hyperref}
+\usepackage{perpage}
+\MakePerPage{footnote}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+\begin{document}
+
+\title[Group action]{Group action}
+
+\author{Gowri Prakash}
+\address{Department of Physics, Indian Institute of Science Education and Research, Tirupati, India.}
+\email{gowriprakash.acad@gmail.com}
+
+\thanks{This was my first expository work, begun during the winter break after my fifth semester at IISER Tirupati.}
+
+\subjclass[2020]{}
+\keywords{}
+
+\maketitle
+
+\section{Action}
+
+Action of an algebraic object on another is a general construct of which group action is one.
+The simplest form of an action involves a set $X$ acting on another set $Y$, since a set is an object with no algebraic structure whatsoever. Such an action is given by a function $A: X \times Y \to Y$.
+For each $x \in X$, this produces an endofunction $A_x: Y \to Y$. Therefore the image $A(X \times Y)$ of the action is $\bigcup_{x \in X} A_x(Y) \subset Y$. This is exactly why it is called an action \emph{by} $X$ (or $X$ acts \emph{on} $Y$). Since every $x \in X$ morphs $Y$ into a subset $A_x(Y)$ of itself.\\
+
+Now one can talk about the map $x \mapsto A_x$ given by the \emph{induced function} $\hat{A}: X \to \mathrm{Fun}(Y)\footnote{$\mathrm{Fun}(Y)$ is the set of all functions from $Y$ to $Y$.}$ of the action, using which we specialize actions of other algebraic objects. The specialization criteria `often' requires the induced function $\hat{A}$ of the action $A$ to be a morphism of the category of the actor; `often' because of the following things: It's not always possible to give Fun($Y$) an algebraic structure that makes it an object of the category of the actor, which is necessary to make $\hat{A}$ a morphism of the same category. And not all categories are algebraic; \textbf{Top} is a category, but a topological space is not an algebraic object. 
+And these are not \emph{all}. So using categorical language may sound like a bad idea, as it takes away the accuracy of the argument, which it clearly does. But here is why it is useful! It gives a unified picture of things that are classically treated separately. Things like \emph{group action} (classically limited to action of groups on sets and groups mainly), \emph{ring representation} (through action of a ring on an ablian group), and \emph{linear representation} (through action of a group on a vector space) can be seen as varied manifestations of the same underlying construct in action, which is \emph{action}.
+
+\definition[Faithful action]{An action $A:X \times Y \to Y$ is faithful if its induced function $\hat{A}$ is injective, and unfaithful otherwise.}
+
+\remark{I'm purposefully ignoring the codomain description of $\hat{A}$}, as it differs for different actor-actee pairs; specifying it, however, is unnecessary, as the injectivity of $\hat{A}$ is purely a set-theoretic property that depends solely on its domain $X$.\\
+
+Algebraic structure of the codomain of $\hat{A}$ (say $Z$) for some actor-actee pairs:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccccc}
+\hline
+Category of $X$ & Category of $Y$ & $Z$ & Category of $Z$ & Formal Name \\
+\hline
+Set & Set & $\operatorname{End}(Y)$ & Set & Action \\
+Grp & Set & $\operatorname{Aut}(Y)$ & Grp & Group Action \\
+Grp & Vect & $\operatorname{Aut}(Y)$ & Grp & Group Representation \\
+Ring & Ab & $\operatorname{End}(Y)$ & Ring & Ring Representation \\
+Alg & Vect & $\operatorname{End}(Y)$ & Alg & Algebra Representation \\
+\hline
+\end{tabular}
+\end{table}
+The endomorphisms and automorphisms in the third column are of the category of $Y$. When $Y$ is a set, $\operatorname{End}(Y) = \operatorname{Fun}(Y)$; when $Y$ is a vector space, $\operatorname{Aut}(Y) = \operatorname{GL}(Y)$, the general linear group of $Y$ etc. But these are just sets of morphisms, what gives them the algebraic structure as given in the fourth column? There are canonical/natural ways of giving them the above-mentioned algebraic structures, which makes them objects of the same category as $X$, which is necessary to make $\hat{A}$ a morphism of the same category, which is what we needed to specialize the action $A$ to an action of the algebraic object $X$.
+For example, function composition `$\circ$' makes $\operatorname{Aut}(Y)$ a group when a group acts on a set or a vector space. In the case of a ring acting on an abelian group, the same function composition makes $\operatorname{End}(Y)$ a monoid, to which we additionally give an abelian group structure using another operation `$+$' (to make `($\operatorname{End}(Y)$, $+$, $\circ$)' a ring), whose pointwise definition exploits the operation of the actee abelian group as follows: For all $f,g \in \operatorname{End}(Y)$, $(f+g)(y) := f(y) + g(y)$ for all $y \in Y$. The operation (addition) on the right-hand side is the operation of the abelian group $Y$; the operation on the left-hand side is the operation (function addition) on $\operatorname{End}(Y)$ that we defined using the abelian group's operation.
+
+%give faithful action as a defintion
+
+
+
+
+
+\begin{thebibliography}{99}
+
+
+
+
+
+
+
+\end{thebibliography}
+
+\end{document}
